@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <title>Budget App</title>
+</head>
+
+<body>
+    <section class="overview">
+        <div class="container">
+            <div>
+                <h4>Total Budget</h4>
+                <small id="total_budget">0</small>
+            </div>
+            <div>
+                <h4>Expenses</h4>
+                <small id="expense">0</small>
+            </div>
+            <div>
+                <h4>Balance</h4>
+                <small id="balance">0</small>
+            </div>
+        </div>
+    </section>
+
+    <section class="budget">
+        <div class="container">
+            <h1>Budget</h1>
+            <input type="text" name="budget" id="budget_input" class="form-control" pattern="\d+" placeholder="Enter Total Amount" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" />
+            <button id="set_budget" type="button" class="btn btn-primary">Set Budget</button>
+        </div>
+    </section>
+
+    <section class="expense">
+        <div class="container">
+            <h1>Expense</h1>
+            <form>
+                <div class="form-field">
+                    <label for="due_date">Due Date <span style="color:red;">*</span></label>
+                    <input class="form-control" type="date" name="date" id="due_date">
+                </div>
+
+                <div class="group">
+                    <div class="form-field">
+                        <label for="total_amount">Total Amount</label>
+                        <input min="0" value="0" class="form-control" type="number" name="total_amount" id="total_amount" readonly>
+                    </div>
+                    <div class="form-field">
+                        <label for="amount">Amount (excl. tax) <span style="color:red;">*</span></label>
+                        <input min="0" value="0" class="form-control" type="number" name="amount" id="amount">
+                    </div>
+                    <div class="form-field">
+                        <label for="tax">Tax % <span style="color:red;">*</span></label>
+                        <input min="0" value="0" class="form-control" type="number" name="tax" id="tax">
+                    </div>
+                </div>
+
+                <div class="form-field">
+                    <label for="tax">Category <span style="color:red;">*</span></label>
+                    <select class="form-control" name="category" id="category">
+                        <option value="Restaurent & Cafe" selected>restaurent & Cafe</option>
+                        <option value="Cloths & Shopping">Cloths & Shopping</option>
+                        <option value="Credit & Loans">Credit & Loans</option>
+                        <option value="Gifts Card">Gifts Card</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <button id="add_expense" type="button" class="btn btn-primary">Add</button>
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+    <section class="record">
+        <div class="container">
+            <h1>Record</h1>
+            <div class="wrapper">
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

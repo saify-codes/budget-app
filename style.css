@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Poppins:wght@100;200;300;400;500;600;700;800&family=Roboto:wght@300;400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "inter", sans-serif;
+}
+
+section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1.5rem;
+}
+
+body {
+  background-color: #f7f7f7;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  align-self: start;
+}
+.form-control {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 1px solid #f7f7f7;
+  outline: none;
+}
+.btn-primary {
+  background-color: #800080;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 0.3rem;
+  transition: 0.3s;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+.btn-primary:hover {
+  background-color: #640264;
+}
+.btn-primary:focus {
+  outline: 2px solid #80008055;
+  outline-offset: 2px;
+}
+
+.overview .container{
+    background-color: #800080;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    margin-top: 1.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 5px 10px 0 #0001;
+}
+.overview .container div{
+    text-align: center;
+}
+.overview .container div h4{
+    margin-bottom: .5rem;
+}
+.budget .container {
+  background-color: #fff;
+  margin-top: 1.5rem;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+  box-shadow: 0 5px 10px 0 #0001;
+}
+
+.expense .container{
+  background-color: #fff;
+  margin-top: 1.5rem;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 10px 0 #0001;
+}
+
+.expense .container form .form-field{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+.expense .container form .form-field label{
+    color: #555;
+    font-size: .8rem;
+    margin-bottom: .5rem;
+    font-weight: bold;
+}
+
+.expense .container form .group{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.expense .container form .group > *{
+    flex-grow: 1;
+}
+
+.record .container{
+    background-color: #fff;
+    margin: 1.5rem 0;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 10px 0 #0001;
+}
+
+.record .container .wrapper{
+    margin-top: 1.5rem;
+}
+.record .container .wrapper .item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.record .container .wrapper .item > div{
+    display: flex;
+    gap: .5rem;
+}
+.record .container .wrapper .item small{
+    color: #555;
+}
+.record .container .wrapper .item .icon{
+    width: 50px;
+    height: 50px;
+    border-radius: .5rem;
+    text-align: center;
+    line-height: 50px;
+}
+
+
+
+
+@media screen and (max-width:768px){
+    .expense .container form .group{
+        gap: 0;
+    }
+    .expense .container form .group > *{
+        flex-basis: 100%;
+    }
+}
